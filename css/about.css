@@ -1,0 +1,114 @@
+/* بخش درباره ما */
+.bio {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* گرید */
+.bio-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* عکس */
+.bio-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* متن */
+.bio-text h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.bio-text .lead {
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* آمارها */
+.stats {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    gap: 18px;
+}
+
+.stats li {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--glass);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+/* افکت Hover */
+.stats li:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+/* متن داخلی */
+.stats strong {
+    display: block;
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 6px;
+}
+
+.stats span {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* دکمه */
+.bio-btn {
+    margin-top: 22px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--green), var(--gold));
+    color: #fff !important;
+    font-size: 17px;
+    border-radius: 14px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+}
+
+.bio-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+    .bio-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .bio-photo {
+        order: 2;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats li {
+        width: 100%;
+    }
+}

@@ -1,0 +1,18 @@
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px
+}
+
+.quote {
+    padding: 18px;
+    border-left: 4px solid var(--green);
+    background: linear-gradient(180deg, rgba(31, 122, 85, 0.03), transparent);
+    border-radius: 10px
+}
+
+@media (max-width:900px) {
+    .testimonials {
+        grid-template-columns: 1fr
+    }
+}
